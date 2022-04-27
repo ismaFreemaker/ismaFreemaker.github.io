@@ -1,3 +1,27 @@
-main{
-    background: green;
+body{
+    max-width: auto;
+    margin: auto;
+    background: #011d1388;
+    font-family: sans-serif;
+}
+
+h1, h2{
+    margin-left: 1em;
+    margin-right: 1em;
+    color: white;
+    background-color: #4b5d5288;
+}
+#title{
+    margin-top: 4em;
+    text-align: center;
+}
+.tournament-date{
+    background-color: #589aaf88;
+}
+.tournament-place{
+    background-color: #589aaf88;
+}
+ul{
+    max-width: auto;
+    color: white;
 }
