@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Made with Glitch</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @keyframes move-div {
+        from {
+          margin-left: 0px;
+        }
+        to {
+          margin-left: 200px;
+        }
+      }
+      .image-1-test {
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        margin-left: 200px;
+        background-color: red;
+        /*           animation-name: move-div;
+          animation-duration: 3s; */
+        /*           animation-delay: 2s; */
+        /*           transition: width 2s, height 2s, transform 2s; */
+        border: 1px solid blue;
+        margin-left: auto;
+      }
+      div:hover {
+        width: 200px;
+        height: 200px;
+        /*           transform: zoom(2em); */
+      }
+      .section-grids {
+        width: 600px;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: repeat(3, 200px);
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+      }
+
+      #box-1 {
+        background: yellow;
+        grid-column: 1;
+        grid-row: 1;
+        align-self: top;
+      }
+      #box-2 {
+        background: green;
+        grid-column: 2;
+        grid-row: 2;
+      }
+      #box-3 {
+        background: orange;
+        grid-column: 3;
+        grid-row: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <li><a href="robot-parts.html">Robot Parts</a></li>
+      <li><a href="form.html">Form</a></li>
+      <li><a href="site-plan.html">Site Plan</a></li>
+      <li><a href="robot-notes.html">Some notes for my page</a></li>
+    </nav>
+    <h1>Form</h1>
+    <!--     <img class="image-1-test" src="https://cdn.glitch.me/f236d507-4733-43c8-8a2b-f77013f29ae4%2F20210617_092048.jpg?v=1636421586843" > -->
+    <section class="section-grids">
+      <div id="box-1">box 1</div>
+      <div id="box-2">box 2</div>
+      <div id="box-3">box 3</div>
+    </section>
+  </body>
+</html>

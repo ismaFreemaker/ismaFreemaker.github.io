@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Experience making a robot from the course BOTS; having some components as: Arduino plate, sensor, DC motors, etc. Not too complex but challenging. This explains in a general way the components, how does it work, and where to look for more knowlegde. Also some tips as advise for your experience.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BOTS experience | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn.glitch.me/f236d507-4733-43c8-8a2b-f77013f29ae4%2FCaptura%20de%20pantalla%202021-09-24%20222008.png?v=1638310231018">
+  </head>
+  <body>      
+      <header>
+        <div class="logo-box"><a href="index.html"><img src="https://cdn.glitch.me/f236d507-4733-43c8-8a2b-f77013f29ae4%2Fmy_redsigma.png?v=1635804934909" width="100" alt="REDSIGMA logo"></a></div>
+        <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="robot-parts.html">Robot Parts</a></li>
+              <li><a href="contact-us.html">Contact us!</a></li>
+<!--                     <li><a href="form.html">Form</a></li> -->
+<!--                 <li><a href="site-plan.html">Site Plan</a></li> -->
+<!--                     <li><a href="robot-notes.html">Some notes for my page</a></li> -->
+            </ul>
+        </nav>
+      </header>  
+    
+      <main>
+          <section class="banner-box">
+              <div class="banner-heading"><h1>An experience making a <b>robot</b></h1></div>
+              <img class="banner-main-img" src="https://cdn.glitch.me/f236d507-4733-43c8-8a2b-f77013f29ae4%2F20210617_092048.jpg?v=1636421586843" alt="Robot main banner">
+              <h6 class="banner-bots-logo-text">Materials and learning from Bots</h6>
+              <div class="banner-bots-logo" ><a href="https://bots.com.ar/lp_api/index.php?c=SQr5U3Be64LkxKvTodqG" target="_blank"><img class="banner-bots-logo" src="https://cdn.glitch.me/f236d507-4733-43c8-8a2b-f77013f29ae4%2Fbots%20logo%20screenshot.jpg?v=1636579971167"  alt="BOTS-logo"></a></div>
+
+          </section>
+          <div class="robo-main-grids">
+                <h2 class="headline-what-1">What does the robot do?</h2>
+                <p class="paragraph-what-1">Well, the robot does many interesting things: </p>
+                <ul class="list-what-1">
+                    <li>Turns the red, and white LEDs on as the turning light of a car. Also has an RGB (red, green and blue) LED, that combines its three colors to form almost any color.</li>
+                    <li>Moves on two wheels with DC motors. </li>
+                    <li>Uses the ultrasonic sensor that makes the robot “realize” how long an object is in front of it. It has a range from 2 – 400 cm ahead of it. </li>
+                    <li>Follows a black line from the floor with the infrared sensors. </li>
+                    <li>Follows the light of a flashlight in the darkness.</li>
+                    <li>Receives the instructions from a remote control to move forward, move backward, turn left and turn right. As well as the stop option.</li>
+                </ul>
+                <img class="image-what-1" src="https://cdn.glitch.me/f236d507-4733-43c8-8a2b-f77013f29ae4%2Frobot.jpg?v=1637184368561" alt="bots image 1">
+
+                <h2 class="headline-how-2">How does “he” do that?</h2>
+                <p class="paragraph-how-2">The first thing to start answering all of your questions about how does the robot works, is the Arduino Uno Plate. The robot needs instructions to move, turn LEDs on in measured amount of times and a bunch of things! And to store, comprehend and fulfill those instructions it needs a “brain”. There is where the Arduino Uno plate comes! The sensors receive values and you have to work with them; for example, if the ultrasonic sensor detects an object at 50cm, you would want our robot to turn left (or right if you prefer). You have to program with the computer in Arduino language and send it to the plate through a USB cable so the robot knows what he is going to respond to the information that the sensors give.</p>
+                <img class="image-how-2" src="https://cdn.glitch.me/f236d507-4733-43c8-8a2b-f77013f29ae4%2F20211110_184015.jpg?v=1636643345408"  alt="Arduino plate">
+
+                <h2 class="headline-tips-3">Some Tips</h2>
+                <ul class="list-tips-3">
+                  <li>Have in mind that everything is proof and error, not everything has to be perfect in the first time. </li>
+                  <li>Be careful with the parts of the robot, they are delicate. </li>
+                  <li>Be patience and take your time. It is suggested to do a little bit every day, like an hour or half of it at minimum. In that way you’ll get very in touch with your project. </li>
+                  <li>Look for help. There is always somebody who can help you! </li>
+                  <li>Start with the easier things and then with the more difficult things. You maybe want your robot to do amazing things at the beginning, but start simple because if not you are going to stress quickly.</li>
+                  <li>Don’t worry to investigate and learn from the ideas of other people, because that is the way to learn!</li>
+                </ul>
+                <img class="image-tips-3" src="https://cdn.glitch.me/f236d507-4733-43c8-8a2b-f77013f29ae4%2F20211110_173847.jpg?v=1636643345408"  alt="Infrarred sensors">
+          </div>
+      </main>
+      <footer>
+          <div class="copyrights">
+                &copy; 2021 RedSigma - Ismael Rojas - WWD-130-23
+          </div>  
+          <section class="bottom-links">
+                <a href="contact-us.html"><h4>Contact us!</h4></a>
+                <a href="site-plan.html"><h4>Site Plan</h4></a>
+          </section>
+      </footer>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width,initial-scale=1">
+          <title>title</title>
+          <style>
+                :root{
+                   --border-radius: 3px 3px ; /* only two values and the rest can be completed in each element*/ 
+                }
+                img {
+                  max-width: 100%;
+/*                   border-radius: var(--border-radius) 0 0; */
+                }
+                
+                .card {
+                  margin: 0 auto;
+                  font-family: sans-serif;
+                  font-weight: bold;
+                  width: 320px;
+                  overflow: hidden;
+                  background-color: white;
+                  border-radius: var(--border-radius);
+                  box-shadow: 1px 1px 4px 1px #888;
+                  }
+                p {text-align: left; padding: 1.5em;}
+                footer{padding-bottom: 1em;}
+                buttom{border: 1px solid black; padding: 3px; color: #888;}
+                .viewButtom{margin-right: -6px; margin-left: 1em; border-radius: 2px 0 0 2px; }
+                .editButtom{border-radius: 0 2px 2px 0;}
+                span {margin-right: 0; margin-left: 11em; font-size: .9em; color: #888;}
+          </style>
+    </head>
+    <body>
+          <article class="card">
+                <img src="https://cdn.glitch.me/f236d507-4733-43c8-8a2b-f77013f29ae4%2F20211110_184015.jpg?v=1636643345408">
+                <p>Awesome! This is an Arduino plate that works perfectly to make millions (if not billions) of things. Cool, right?</p>
+                <footer>
+                    <buttom class="viewButtom">View</buttom>  
+                    <buttom class="editButtom">Edit</buttom>
+                    <span>8mins</span>
+                </footer>
+          </article>
+    </body>
+</html>

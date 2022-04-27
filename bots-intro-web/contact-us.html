@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="description" content="Experience making a robot from the course BOTS; having some components as: Arduino plate, sensor, DC motors, etc. Not too complex but challenging. This explains in a general way the components, how does it work, and where to look for more knowlegde. Also some tips as advise for your experience.">
+
+            <title>BOTS experience | CONTACT US!</title>
+            <link rel="stylesheet" href="style.css">
+            <link rel="icon" type="image/x-icon" href="https://cdn.glitch.me/f236d507-4733-43c8-8a2b-f77013f29ae4%2FCaptura%20de%20pantalla%202021-09-24%20222008.png?v=1638310231018">
+
+      </head>
+      <body>      
+           <header>
+              <div class="logo-box"><a href="index.html"><img src="https://cdn.glitch.me/f236d507-4733-43c8-8a2b-f77013f29ae4%2Fmy_redsigma.png?v=1635804934909" width="100" alt="REDSIGMA logo"></a></div>
+              <nav>
+                  <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="robot-parts.html">Robot Parts</a></li>
+                    <li><a href="contact-us.html">Contact us!</a></li>
+      <!--                     <li><a href="form.html">Form</a></li> -->
+      <!--                 <li><a href="site-plan.html">Site Plan</a></li> -->
+      <!--                     <li><a href="robot-notes.html">Some notes for my page</a></li> -->
+                  </ul>
+              </nav>
+          </header>  
+          <main>
+                <div class="contact-grids">
+                      <h1 class="headline-contact-us-1">Are you <b>interested</b> in this <b>project?</b></h1>
+                      <h1 class="headline-contact-us-2"><b>Contact Us!</b></h1>
+                      <img class="img-contact-us" src="https://cdn.glitch.me/f236d507-4733-43c8-8a2b-f77013f29ae4%2Frobot.jpg?v=1637184368561" alt="Finished robot image">
+                      <ul class="contact-items">
+                          <li>Phone number: +5493743540138</li>
+                          <li>Adress: Mitre 2138, Lujan, Buenos Aires, Argentina</li>
+                          <li>Email: rojasisma10@gmail.com</li>
+                      </ul>
+                      <form action="/my-handling-form-page" method="post">
+                          <ul id="ul-form">
+                                <li>
+                                      <label for="name">Name:</label>
+                                      <input type="text" id="name" name="user_name">
+                                </li>
+                                <li>                  
+                                      <label for="mail">E-mail:</label>
+                                      <input type="email" id="mail" name="user_email">
+                                </li>
+                                <li>
+                                      <label for="msg">Message:</label>
+                                      <textarea id="msg" name="user_message"></textarea>
+                                </li>
+                                <li class="button">
+                                      <button type="submit">Send</button>
+                                </li>
+                          </ul>
+                      </form>
+                      <p class="contact-thanks-text">Special thanks to: </p>
+                      <ul class="contact-thanks-list">
+                        <li><a class="thank-link" href="https://bots.com.ar/lp_api/index.php?c=SQr5U3Be64LkxKvTodqG" target="_blank">BOTS</a> electronic and programing courses.</li>
+<!--                         <li>My family. </li> -->
+                        <li><a class="thank-link" href="https://www.byui.edu/" target="_blank">BYU-Idaho</a> through <a class="thank-link" href="https://www.byupathway.org/" target="_blank">BYU-Pathway Worldwide</a></li>
+                        <li><a class="thank-link" href="https://www.arduino.cc/" target="_blank">Arduino</a></li>
+                      </ul>
+<!--                 <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=mitre%202138,%20Lujan,%20Buenos%20Aires&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org"></a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div></div> -->
+                </div>
+          </main>   
+
+          <footer>
+              <div class="copyrights">
+                    &copy; 2021 RedSigma - Ismael Rojas - WWD-130-23
+              </div>  
+              <section class="bottom-links">
+                    <a href="contact-us.html"><h4>Contact us!</h4></a>
+                    <a href="site-plan.html"><h4>Site Plan</h4></a>
+              </section>
+          </footer>
+      <script>
+          // get the feedback div element so we can do something with it.
+          const feedbackElement = document.getElementById('feedback');
+          // get the form so we can read what was entered in it.
+          const formElement = document.forms[0];
+          // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+          formElement.addEventListener('submit', function(e) {
+              // stop the form from doing the default action
+              e.preventDefault();
+              // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+              feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+              // make the feedback element visible.
+              feedbackElement.style.display = "block";
+              // add a class to move everything down so our message doesn't cover it.
+              document.body.classList.toggle('moveDown');
+          });
+    </script>  
+  </body>
+</html>

@@ -1,0 +1,502 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Ubuntu:wght@300&display=swap');
+
+
+@keyframes first-image-move{
+  from{margin-left: 0px;}
+  to {margin-left: auto;}
+}
+@keyframes headline-1-move{
+  from {grid-column: end;}
+  to {grid-column: 1/4;}
+}
+/* colors for my web_page:
+  > #697770	
+  > #2E5660		
+  > #F50400
+  > #FBFF0A
+*/
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #2E5660;
+  --secondary-color: #697770;
+  --accent1-color: #F50400;
+  --accent2-color: #FBFF0A;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: "Raleway";
+  --paragraph-font: "Ubuntu", Helvetica, sans-serif;
+
+  /* these colors below should be chosen from among your palette colors above */
+  --body-background-color: #697770;
+  --header-background-color: #FBFF0A88;
+  --background-headline-color: #2E566088;
+  --bold-font-color: #FBFF0A;
+  --bold-background-font-color: #2E566088;
+  --headline-color-on-white: black;  /* headlines on a white background */ 
+  --headline-color-on-color: #FBFF0A; /* headlines on a colored background */ 
+  --paragraph-color-on-white: black; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
+  --paragraph-background-color: black;
+  --nav-link-color: #697770;
+  --nav-background-color: #FBFF0A;
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: #F50400;
+  --nav-hover-border-color: white;
+  --img-border-color: #2E5660;
+  --ul-background: #2E566088;
+  
+  --table-headline-color: #FBFF0A;
+  --row-headline-background: #F5040088;
+  --table-data-color: white;
+  --row-data-background: #2E566088;
+}
+body {
+  background-color: var(--primary-color);
+  font-family: "Ubuntu", sans-serif;
+  padding: 5px 25px;
+  font-size: 18px;
+  margin: auto;
+  color: #444;
+}
+h1{
+  font-family: "Raleway", serif;
+  font-size: 40px;
+  background: var(--background-headline-color); 
+
+}
+h2 {
+  color: black;
+  font-family: "Raleway", serif;
+  font-size: 32px;
+  margin: 20px auto 0 0;
+  background: var(--background-headline-color);
+  color: var(--headline-color-on-color);  
+}
+p, li, h6 {
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+}
+main, div, section, header, .banner-box, footer{
+  max-width: 100%;
+  margin: 0 auto;
+}
+img{
+  max-width: 100%;
+/*   animation-name: first-image-move; */
+}
+/* --------------------------------------down here the css for the nav and header ------------------------------------ */
+header{
+/*   margin: 0 auto; */
+  padding: 1em;
+  background-color: var(--header-background-color);
+  display: grid;
+  grid-template-columns: 110px 1fr;
+/*   position: fixed; */
+/*   max-width: 100%; */
+}
+.logo-box {
+  grid-column: 1/2;
+/*   width: auto; */
+  align-self: center;
+  justify-self: center;
+}
+header div {
+    grid-column: 2/3; 
+}
+b {
+  color: var(--bold-font-color);
+  background-color: var(--bold-background-font-color);
+  border-radius: 0.2em;
+}
+nav > ul {
+  padding: 5px ;
+  background-color: var(--nav-background-color);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+  justify-items: center;
+/*   padding-left: 0px; */
+  justify-items: center;
+}
+nav > ul li{
+  list-style: none;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  margin: 0 auto;
+/*   border: 1px solid black; */
+  font-family: "Raleway";
+}
+nav a{
+  text-decoration: none;
+}
+nav a:link, a:visited{
+  color: var(--nav-link-color);
+  margin: 10px;
+  padding: 10px;
+}
+nav a:hover, a:active {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid var(--nav-hover-border-color);
+}
+ul {
+  background: var(--ul-background);
+}
+
+/* ---------------------------down here the css to the body and stuff ---------------------------------------------- */
+main {
+  background: var(--secondary-color);
+  margin: 0 auto;
+  padding: 1em;
+}
+.banner-box{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+/*   position: relative; */
+}
+@keyframes ani-banner-image{
+  from {opacity: 0; }
+  to {opacity: 1; }
+} 
+.banner-main-img{
+  animation: ani-banner-image 3s ;  
+  grid-column: 1/end;
+  grid-row: 1/end;
+}
+@keyframes move-banner-heading{
+  from {margin-left: 1000px; opacity: 0;}
+  to {margin-left: 0px; opacity: 1;}
+} 
+.banner-heading{
+  grid-column: 1/4;
+  grid-row: 1;
+  color: white;
+  position: absolute;
+/*   justify-self: left; */
+  padding-left: 1em;
+  margin-top: 0px;
+  animation-name: move-banner-heading;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
+.banner-bots-logo-text{
+  position: relative;
+  grid-column: 4/5;
+  grid-row: 2/3;
+  align-self: end;
+  text-align: center;
+  margin: 0 auto  ;
+/*   margin: 0; */
+  background-color: #2E566088;
+  color: #FBFF0A;
+}
+@keyframes move-bots-logo{
+  from {margin-left: 1000px;  opacity: 0.3;}
+  to {margin-left: 0px; opacity: 1;}
+} 
+.banner-bots-logo{
+  grid-column: 4/5;
+  grid-row: 3/4;
+  align-self: end;
+  animation-name: move-bots-logo;
+  animation-duration: 4s;
+  animation-delay: -1s;
+  }
+
+/* ------------------------------------------ robo main grids (content)---------------------------------------*/
+
+.robo-main-grids {
+  display: grid;
+  max-width: auto;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1em;
+/*   width-items: auto; */
+  justify-items: stretch;
+  align-items: center;
+}
+@keyframes img-movement{
+  from {top: -1000px;  opacity: 0;}
+  to {top: 0px; opacity: 1;}
+}
+.headline-what-1{grid-column: 1/4;  grid-row: 1;}
+.paragraph-what-1{grid-column: 1/4; grid-row: 2; margin: 0px;}
+.list-what-1{grid-column: 1/4; grid-row: 3; margin-top: 0px;}
+.image-what-1{grid-column: 4/6; grid-row: 2/4; animation: img-movement 5s;}
+
+.headline-how-2 {grid-column: 1/4; grid-row: 4;}
+.paragraph-how-2 {grid-column: 1/end; margin-top: 0px; grid-row: 5;}
+.image-how-2 {grid-column: 1/end; grid-row: 6; width: auto;  }
+
+.headline-tips-3{grid-column: 1/4; margin-bottom: 0px; grid-row: 7; align-self: center;}
+.list-tips-3{grid-column: 1/4; margin-top: 0px; align-self: start; grid-row: 8/9;}
+.image-tips-3{grid-column: 4/6; grid-row: 8/9 ;   justify-self: center; align-self: center; margin-top: 0px; } 
+
+
+/* ------------------------------- css footer part ----------------------------------------------------- */
+footer{
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: #FBFF0A;
+  align-items: center;
+  justify-items: center;
+}
+.copyrights{grid-column: 1; }
+.bottom-links{grid-column: 2; 
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(6em, 1fr)); align-items: center; justify-items: center;}
+
+.bottom-links a{
+  text-decoration: none;
+}
+
+.bottom-links > a:link, a:visited{
+  color: var(--nav-link-color);
+  margin: 10px;
+  padding: 10px;
+}
+.bottom-links  > a:hover, a:active {
+  color: var(--nav-hover-link-color);
+  margin: 10px;
+  padding: 10px;
+  background-color: var(--nav-hover-background-color);
+  color: var(--nav-hover-link-color);
+  border: 1px solid var(--nav-hover-border-color);
+
+}
+  
+/*    --------------------- web page ROBOT PARTS-----------------------------------------------*/
+#text-bots-logo-parts{
+  color: #FBFF0A;
+}
+
+#headline-banner-parts{
+  background-color: #69777088;
+  color: white;
+}
+
+.robo-parts-grids{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1em;
+}
+.headline-parts{grid-column: 1/3; grid-row: 1; color: #FBFF0A; margin-top: 1.2em;}
+.paragraph-parts-1{grid-column: 1/end; grid-row: 2; margin-top: 0;} 
+.table-robo-parts{grid-column: 2/4; grid-row: 3/6;}
+.image-parts-1{grid-column: 5/8; grid-row: 3; margin: 1em auto;}
+.image-parts-2{grid-column: 6/9; grid-row: 4; margin: 1em auto;}
+.image-parts-3{grid-column: 5/8; grid-row: 5; margin: 1em auto;}
+.paragrap-parts-2{grid-column: 1/ span end; grid-row: 6; justify-self: center; margin: 20px 20px 20px 20px;}
+
+.robo-parts-grids > img{
+/*   margin: 1em; */
+/*   pading-left: 0.5em; */
+  justify-self: stretch;
+  align-self: center;
+  width: auto;
+}
+th, td{
+  text-align: center;
+  padding: 0.5em;
+}
+th{
+  color: var(--table-headline-color);
+  background: var(--row-headline-background);
+  } 
+td{
+  color: var(--table-data-color);
+  background:	var(--row-data-background);
+}
+.robo-parts-grids img, .robo-main-grids img {border: 0.5em solid var(--img-border-color); border-style: dashed;}
+/* colors for my web_page:
+  > #697770	
+  > #2E5660		
+  > #F50400
+  > #FBFF0A
+*/
+
+/* ----------------------------the css of the CONTACT US web page ------------------------- */
+.contact-grids{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1em;
+}
+@keyframes contact-headline-1{
+  from {margin-left: 1200px; opacity: 0;}
+  to {margin-left: 0px; opacity: 1;}
+}
+@keyframes contact-headline-2{
+  from {margin-left: -1000px; opacity: 0;}
+  to {margin-left: 1em; opacity: 1;}
+}
+
+
+
+.headline-contact-us-1{grid-column: 1/end; grid-row: 1; color: white; position: relative; justify-self: center; align-self: start; background: var(--background-headline-color); padding: 0.5em; animation: contact-headline-1 3s 1s ; animation-fill-mode: backwards; }
+.headline-contact-us-2{grid-column: 1/3; grid-row: 2; position: relative; justify-self: start;padding-bottom: 0px; margin-left: 1em; animation: contact-headline-2 3s 1s; animation-fill-mode: backwards;}
+.img-contact-us{grid-column: 1/3; grid-row: 3/6; width: auto; align-self: start;  }
+.contact-items{grid-column: 1/3; grid-row: 2/7; align-self: center; justify-self: center;}
+.contact-thanks-text{grid-column: 1/end; grid-row: 6; align-self: end; margin: 2em 0 0.3em;}
+.contact-thanks-list{grid-column: 1/end; grid-row: 7; display: block; margin: 0; align-self: start; }
+
+.contact-items > li{list-style: none; text-align: center; padding: 1em 0 1em 0; font-size: 1em; color: #FBFF0A; font-weight: bold; background: #F5040088;
+  transition: weight 2s, height 2s, /*transform 2s*/font-size 0.3s;}
+.contact-thanks-list > li{}
+
+.contact-items>li:hover {
+  width: 700px;
+  height: auto;
+  font-size: 2em;
+/*   transform: rotate(360deg); */
+}
+
+/* --------------------------- down here the LINKS colors and style -------------------- */
+.thank-link:link, .thank-link:visited{
+  text-decoration: none;
+  color: #FBFF0A;
+}
+.thank-link:hover, .thank-link:active{
+  text-decoration: underline;
+  background: #F5040088;
+  color: #FBFF0A;
+}
+
+
+/* -----------------------------------------  contact FORM ------------------------ */
+
+form {
+  /* Center the form on the page */
+  margin: 0 auto;
+  width: 100%;
+  /* Form outline */
+  padding: 0px;
+  border: 1px solid #CCC;
+  border-radius: 0px;
+  grid-column: 3/5;
+  grid-row: 3/6;
+  justify-self: stretch;
+}
+
+ul {
+  
+  list-style: square;
+  padding: 1em 1em 1em 1.5em;
+  margin: 1em;
+}
+form ul {list-style: none;}
+
+form li + li {
+  margin-top: 1em;
+}
+
+label {
+  /* Uniform size & alignment */
+  display: inline-block;
+  width: auto;
+  text-align: right;
+}
+
+input,
+textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+
+  /* Uniform text field size */
+  width: auto;
+  box-sizing: border-box;
+
+  /* Match form field borders */
+  border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+  /* Additional highlight for focused elements */
+  border-color: #000;
+}
+
+textarea {
+  /* Align multiline text fields with their labels */
+  vertical-align: top;
+
+  /* Provide space to type some text */
+  height: 250px;
+  width: 100%;
+}
+
+.button {
+  /* Align buttons with the text fields */
+  padding: 0px; /* same size as the label elements */ 
+  justify-self: center;
+  
+}
+
+button {
+  /* This extra margin represent roughly the same space as the space
+     between the labels and their text fields */
+  margin-left: .5em;
+  background: #FBFF0A88;
+  color: green;
+  margin: 0 auto;
+  padding:  0.5em 1em;
+} 
+button:hover {
+  /* This extra margin represent roughly the same space as the space
+     between the labels and their text fields */
+  margin-left: .5em;
+  background: #FBFF0A;
+  color: green;
+  margin: 0 auto;
+  padding:  0.5em 1em;
+} 
+
+#feedback{
+  background-color: antiquewhite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: .5em;
+  /*make this element invisible until we are ready for it*/
+  display: none;
+}
+
+.moveDown {
+  margin-top: 3em;
+}
+
+
+/* down here the code that I was doing with different classes than the main page. But after some hours of struggle... BUM! It's the SAME STRUCTURE! */
+/* .banner-parts-box{   
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    max-width: 960px;
+  }
+.banner-parts-headline{grid-column: 1/3; grid-row: 1; position: absolute;}
+.banner-parts-img{grid-column: 1/7; grid-row: 1/5; width: auto; justify-self: stretch; position: relative;}
+.banner-bots-logo-text{grid-column: 6/7;grid-row: 4/5;}
+.banner-parts-bots-logo{grid-column: 6/7; grid-row: 4/5; width: 100px; justify-self: center;}
+.banner-bots-logo img{width: 100px;}
+ */
+  
+  
+  
+@media screen and (max-width: 550px){
+  .home-grids, nav ul, .banner-box, .robo-main-grids, .robo-parts-grids, .contact-grids, form{
+    display: block;
+  }
+}
+
+
